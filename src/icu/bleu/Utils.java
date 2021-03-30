@@ -73,16 +73,5 @@ public class Utils {
         }
     }
 
-    //跑命令 processBuilder
-    public static void runFFFmpeg(String videoAddr,
-                                  List<String> command) {
 
-        ProcessBuilder builder = new ProcessBuilder(command).inheritIO();
-        Process process = null;
-        try {
-            process = builder.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
