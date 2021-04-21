@@ -1,23 +1,24 @@
-package icu.bleuweb.properties;
+package icu.bleuweb.vo;
 
-import icu.bleuweb.properties.types.OperatingSystemType;
+import icu.bleuweb.vo.types.OperatingSystemType;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.net.URL;
 
+//这个类用来存放可变的下载的选项
 @Component
 @Getter
 @Setter
 @ToString
 @ConfigurationProperties(prefix = "ytbdl")
 public class DownloadProperties {
-    //命令名
-    private static final String YOUTUBE_DL = "youtube-dl";
+
     //系统信息
     private OperatingSystemType operationSystemType;
     //需要下载的url
@@ -34,6 +35,7 @@ public class DownloadProperties {
     DownloadProperties() {
     }
 
+    @PostConstruct
     public void setOperationSystemType() {
         String os = System.getProperty("os.name").toLowerCase();
         if (os.indexOf("linux") >= 0)

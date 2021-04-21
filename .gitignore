@@ -3,3 +3,5 @@
 /out/
 potplayerCutter.iml
 /target/
+/video-dl-java-spring-boot.iml
+*.iml

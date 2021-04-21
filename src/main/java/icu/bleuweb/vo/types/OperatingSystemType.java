@@ -1,4 +1,4 @@
-package icu.bleuweb.properties.types;
+package icu.bleuweb.vo.types;
 
 public enum OperatingSystemType {
     LINUX,

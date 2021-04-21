@@ -1,23 +1,23 @@
 package icu.bleuweb.service;
 
-import icu.bleuweb.properties.DownloadProperties;
+import icu.bleuweb.runner.ProcessRunner;
+import icu.bleuweb.vo.DownloadProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DownloadService {
 
-    DownloadProperties downloadProperties;
+    ProcessRunner runner = new ProcessRunner();
 
     @Autowired
-    public DownloadService(DownloadProperties properties) {
-        this.downloadProperties = properties;
+    public DownloadService(ProcessRunner runner) {
+        this.runner = runner;
     }
 
-    @Override
-    public String toString() {
-        return "DownloadService{" +
-                "downloadProperties=" + downloadProperties +
-                '}';
+    public void download(DownloadProperties downloadProperties) {
+        runner.execute(downloadProperties);
+//        runner.executeEdit();
     }
+
 }
