@@ -11,7 +11,7 @@ public class Command {
 
     public static List<String> ListFormat() {
         List<String> commands = new ArrayList<>();
-        commands.add("cmd.exe");
+//        commands.add("cmd.exe");
         commands.add(YOUTUBE_DL);
         commands.add(LIST_FORMAT);
         return commands;
