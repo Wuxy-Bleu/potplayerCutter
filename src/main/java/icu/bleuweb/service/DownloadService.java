@@ -16,8 +16,9 @@ public class DownloadService {
     }
 
     public void download(DownloadProperties downloadProperties) {
-        runner.execute(downloadProperties);
+//        runner.executeFormat(downloadProperties);
 //        runner.executeEdit();
+        runner.downloadBest(downloadProperties);
     }
 
 }

@@ -25,14 +25,19 @@ public class DownloadController {
         downloadProperties.setOperationSystemType();
     }
 
+    /**
+     *
+     * @param url 怎么使得这个url的请求参数是可选的
+     * @return
+     */
     @RequestMapping("/download")
     public Map<String, String> download(@RequestParam URL url) {
         this.downloadProperties.setUrl(url);
 
         downloadService.download(downloadProperties);
 
-        Map<String, String> test = new HashMap<>();
-        test.put("download properties", this.downloadProperties.toString());
-        return test;
+        Map<String, String> outputProperties = new HashMap<>();
+        outputProperties.put("download properties", this.downloadProperties.toString());
+        return outputProperties;
     }
 }
