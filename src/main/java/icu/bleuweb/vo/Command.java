@@ -59,6 +59,13 @@ public class Command {
         return commands;
     }
 
+    public static List<String> basicDownload() {
+        commands.clear();
+        commands.add(YOUTUBE_DL);
+        commands.add(DEFAULT_OUTPUT_LOCATION);
+        return commands;
+    }
+
     public static List<String> whichShell() {
         commands.clear();
         commands.add("echo");
@@ -70,6 +77,19 @@ public class Command {
         commands.clear();
         commands.add("w");
         return commands;
+    }
+
+    public static List<String> pwd() {
+        commands.clear();
+        commands.add("pwd");
+        return commands;
+    }
+
+    public static List<String> ps() {
+        commands.clear();
+        commands.add("ps");
+        return commands;
+
     }
 
 

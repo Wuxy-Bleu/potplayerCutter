@@ -60,4 +60,65 @@ public class ProcessRunner {
             e.printStackTrace();
         }
     }
+
+    public void whichShell(DownloadProperties properties) {
+        this.command = Command.whichShell();
+        ProcessBuilder builder = new ProcessBuilder(command);
+        log.info(builder.command().toString());
+        builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+        try {
+            final Process process = builder.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void pwd() {
+        this.command = Command.pwd();
+        ProcessBuilder builder = new ProcessBuilder(command);
+        log.info(builder.command().toString());
+        builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+        try {
+            final Process process = builder.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void ps() {
+        this.command = Command.ps();
+        ProcessBuilder builder = new ProcessBuilder(command);
+        log.info(builder.command().toString());
+        builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+        try {
+            final Process process = builder.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void whichUser() {
+        this.command = Command.whichUser();
+        ProcessBuilder builder = new ProcessBuilder(command);
+        log.info(builder.command().toString());
+        builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+        try {
+            final Process process = builder.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void basicDownload() {
+        this.command = Command.basicDownload();
+        ProcessBuilder builder = new ProcessBuilder(command);
+        log.info(builder.command().toString());
+        builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+        try {
+            final Process process = builder.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

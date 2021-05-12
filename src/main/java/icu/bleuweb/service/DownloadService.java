@@ -18,7 +18,14 @@ public class DownloadService {
     public void download(DownloadProperties downloadProperties) {
 //        runner.executeFormat(downloadProperties);
 //        runner.executeEdit();
-        runner.downloadBest(downloadProperties);
+//        runner.downloadBest(downloadProperties);
+//        runner.whichShell(downloadProperties);
+//        runner.pwd();
+//        runner.ps();
+//        runner.whichUser();
+        runner.basicDownload();
+
     }
+
 
 }
