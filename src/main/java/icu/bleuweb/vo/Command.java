@@ -43,6 +43,11 @@ public class Command {
         return commands;
     }
 
+    /**
+     * 下载最好质量的音视频
+     *
+     * @return
+     */
     public static List<String> downloadBest() {
         commands.clear();
         commands.add(YOUTUBE_DL);
@@ -51,6 +56,19 @@ public class Command {
         commands.add(OUTPUT);
         commands.add(DEFAULT_OUTPUT_LOCATION);
 
+        return commands;
+    }
+
+    public static List<String> whichShell() {
+        commands.clear();
+        commands.add("echo");
+        commands.add("$SHELL");
+        return commands;
+    }
+
+    public static List<String> whichUser() {
+        commands.clear();
+        commands.add("w");
         return commands;
     }
 

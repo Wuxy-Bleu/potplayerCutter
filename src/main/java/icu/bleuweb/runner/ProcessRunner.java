@@ -28,7 +28,7 @@ public class ProcessRunner {
         builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
         //获取shell进程的环境变量
         Map<String, String> environment = builder.environment();
-//        log.info(environment.toString());
+        log.info(environment.toString());
         //执行command
         try {
             final Process process = builder.start();
